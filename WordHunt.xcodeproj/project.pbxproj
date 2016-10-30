@@ -15,6 +15,10 @@
 		DE60FC4D1D328D09006622BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE60FC4B1D328D09006622BE /* LaunchScreen.storyboard */; };
 		DE60FC581D328D09006622BE /* WordHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60FC571D328D09006622BE /* WordHuntTests.swift */; };
 		DE60FC631D328D09006622BE /* WordHuntUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60FC621D328D09006622BE /* WordHuntUITests.swift */; };
+		DE60FC711D328D1B006622BE /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60FC701D328D1B006622BE /* LetterView.swift */; };
+		DE60FC731D328D82006622BE /* LetterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE60FC721D328D82006622BE /* LetterView.xib */; };
+		DE60FC751D3299EA006622BE /* LetterBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60FC741D3299EA006622BE /* LetterBoxModel.swift */; };
+		DE60FC771D32B7B2006622BE /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60FC761D32B7B2006622BE /* WordEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		DE60FC5E1D328D09006622BE /* WordHuntUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordHuntUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE60FC621D328D09006622BE /* WordHuntUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordHuntUITests.swift; sourceTree = "<group>"; };
 		DE60FC641D328D09006622BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE60FC701D328D1B006622BE /* LetterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LetterView.swift; path = ../LetterView.swift; sourceTree = "<group>"; };
+		DE60FC721D328D82006622BE /* LetterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LetterView.xib; sourceTree = "<group>"; };
+		DE60FC741D3299EA006622BE /* LetterBoxModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterBoxModel.swift; sourceTree = "<group>"; };
+		DE60FC761D32B7B2006622BE /* WordEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +112,12 @@
 				DE60FC431D328D09006622BE /* Main.storyboard */,
 				DE60FC491D328D09006622BE /* Assets.xcassets */,
 				DE60FC4B1D328D09006622BE /* LaunchScreen.storyboard */,
+				DE60FC701D328D1B006622BE /* LetterView.swift */,
+				DE60FC721D328D82006622BE /* LetterView.xib */,
 				DE60FC4E1D328D09006622BE /* Info.plist */,
 				DE60FC461D328D09006622BE /* WordHunt.xcdatamodeld */,
+				DE60FC741D3299EA006622BE /* LetterBoxModel.swift */,
+				DE60FC761D32B7B2006622BE /* WordEngine.swift */,
 			);
 			path = WordHunt;
 			sourceTree = "<group>";
@@ -234,6 +246,7 @@
 			files = (
 				DE60FC4D1D328D09006622BE /* LaunchScreen.storyboard in Resources */,
 				DE60FC4A1D328D09006622BE /* Assets.xcassets in Resources */,
+				DE60FC731D328D82006622BE /* LetterView.xib in Resources */,
 				DE60FC451D328D09006622BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +274,10 @@
 			files = (
 				DE60FC481D328D09006622BE /* WordHunt.xcdatamodeld in Sources */,
 				DE60FC421D328D09006622BE /* ViewController.swift in Sources */,
+				DE60FC711D328D1B006622BE /* LetterView.swift in Sources */,
+				DE60FC771D32B7B2006622BE /* WordEngine.swift in Sources */,
 				DE60FC401D328D09006622BE /* AppDelegate.swift in Sources */,
+				DE60FC751D3299EA006622BE /* LetterBoxModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +502,7 @@
 				DE60FC691D328D09006622BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE60FC6A1D328D09006622BE /* Build configuration list for PBXNativeTarget "WordHuntTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +511,7 @@
 				DE60FC6C1D328D09006622BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE60FC6D1D328D09006622BE /* Build configuration list for PBXNativeTarget "WordHuntUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +520,7 @@
 				DE60FC6F1D328D09006622BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
