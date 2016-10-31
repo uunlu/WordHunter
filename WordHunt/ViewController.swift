@@ -14,6 +14,8 @@ class ViewController: UIViewController, ViewTouchDelegate {
     
     var boxes : [LetterView] = [LetterView]()
     
+    private var imageViews:[LetterView] = []
+    
     var userAnswer: String!
    
     override func viewDidLoad() {
@@ -102,6 +104,8 @@ class ViewController: UIViewController, ViewTouchDelegate {
                         lv.model = model
                    
                         indexBoxes += 1
+                        
+                        self.imageViews.append(lv)
                       // print(lv.model.boxLetter!)
                     }
                 }
@@ -109,9 +113,27 @@ class ViewController: UIViewController, ViewTouchDelegate {
         }
     }
     
+    func highlightImageViews(touches: Set<NSObject>){
+        if let touch = touches.first as? UITouch {
+            for iv in imageViews {
+                let point = touch.locationInView(iv.superview)
+                
+                print(point)
+                print(iv.frame)
+                if (CGRectContainsPoint(iv.frame, point)) {
+                    iv.alpha = 0.5
+                }
+            }
+        }
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
+        self.highlightImageViews(touches)
+        super.touchesBegan(touches, withEvent: event)
         if let touch = touches.first {
+            
+            
             
             if let letterView = touch.view  {
                 if letterView is LetterView{
@@ -120,16 +142,17 @@ class ViewController: UIViewController, ViewTouchDelegate {
                     print(lv?.label.text)
                 }
             }
-            
-            
-            
-            
         }
         
     }
 //
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.highlightImageViews(touches)
+        super.touchesBegan(touches, withEvent: event)
+        
         if let touch = touches.first {
+            self.highlightImageViews(touches)
             for lv in touch.view!.subviews{
                
                 if lv is UIStackView{
@@ -151,6 +174,8 @@ class ViewController: UIViewController, ViewTouchDelegate {
     }
 //
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+         super.touchesEnded(touches, withEvent: event)
         self.boxes = [LetterView]()
     }
 
